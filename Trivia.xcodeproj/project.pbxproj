@@ -54,14 +54,46 @@
 		476FDE2A2214146F007380C4 /* Trivia */ = {
 			isa = PBXGroup;
 			children = (
-				476FDE2B2214146F007380C4 /* AppDelegate.swift */,
+				476FDE3F2214160E007380C4 /* Model */,
+				476FDE3E22141607007380C4 /* View */,
+				476FDE3D221415F7007380C4 /* Controller */,
+				476FDE4022141623007380C4 /* Support Files */,
+			);
+			path = Trivia;
+			sourceTree = "<group>";
+		};
+		476FDE3D221415F7007380C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				476FDE2D2214146F007380C4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		476FDE3E22141607007380C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				476FDE2F2214146F007380C4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		476FDE3F2214160E007380C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		476FDE4022141623007380C4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				476FDE2B2214146F007380C4 /* AppDelegate.swift */,
 				476FDE3222141470007380C4 /* Assets.xcassets */,
 				476FDE3422141470007380C4 /* LaunchScreen.storyboard */,
 				476FDE3722141470007380C4 /* Info.plist */,
 			);
-			path = Trivia;
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
