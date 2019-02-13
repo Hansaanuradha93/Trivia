@@ -11,6 +11,7 @@ import Foundation
 struct QuestionBank {
     
     private var currentQuestionIndex = 0
+    var gamePoint = 0
     
     var questions = [
         "What’s the name of this city in the United States with a bell in the near middle of the city?",

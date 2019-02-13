@@ -18,11 +18,14 @@ class GameViewController: UIViewController {
     @IBOutlet weak var currentGamePointLabel: UILabel!
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionTextLabel: UILabel!
-    
+    @IBOutlet weak var falseButton: UIButton!
     // MARK: - View Controller methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Lets disable the False button at the start of the game
+        falseButton.isEnabled = false
     }
     
     // MARK: - IBActions
@@ -30,15 +33,30 @@ class GameViewController: UIViewController {
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
         if sender.tag == 0 { // True Button
-            print("True button tapped")
+            
+            if currentGamePointLabel.text == "--" {
+                // Lets enable the False button when True button is pressed
+                falseButton.isEnabled = true
+            } else {
+                // Lets increase the game point by 1
+                questionBank.gamePoint += 1
+            }
+            
         } else if sender.tag == 1 { // False Button
-            print("False button tapped")
+            // Lets decrease the game point by 1
+            questionBank.gamePoint -= 1
         }
         
         // Lets update UI here
+        updateUI()
+    }
+    
+    // MARK: - Support Functions
+    
+    func updateUI() {
         questionTextLabel.text = questionBank.getNextQuestion()
         questionImageView.image = UIImage(named: questionBank.getNextImageName())
-        
+        currentGamePointLabel.text = "\(questionBank.gamePoint)"
     }
     
 
